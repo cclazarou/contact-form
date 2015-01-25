@@ -1,0 +1,19 @@
+.text-field{
+    padding: 15px;
+}
+
+
+input[type="text"]{
+    width: 170px;
+    height: 30px;
+    padding: 10px 15px;
+}
+
+input[name="email_address"], input[name="user_name"]{
+    width: 250px;
+}
+
+input[name="comment"]{
+    width: 600px;
+    height: 300px;
+}
