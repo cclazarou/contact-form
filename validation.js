@@ -27,3 +27,26 @@ function isEmail(inputName) {
     
 }
 
+function isPhoneNumber(number) {
+    "use strict";
+
+    /* var phoneNumberRegex = only allow numbers, - and + */
+    if (phoneNumberRegex.test(number)) {
+        alert("is a valid phone number");
+        return true;
+    } else {
+        alert("is not a valid phone number");
+        return false;
+    }
+}
+
+function commentVal(inputComment) {
+    "use strict";
+
+    /* var commentTest = regex that doesnt allow /\><[]^=+' */
+    var comment = document.forms["contact_form"][inputComment].value;
+
+    if (comment.length > 160) {
+        alert("Comments cannot exceed 160 characters.");
+    }
+}
