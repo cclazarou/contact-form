@@ -48,5 +48,9 @@ function commentVal(inputComment) {
 
     if (comment.length > 160) {
         alert("Comments cannot exceed 160 characters.");
+        return false;
+    } else {
+        alert("comment length ok");
+        return true;
     }
 }
