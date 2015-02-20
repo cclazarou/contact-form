@@ -1,12 +1,19 @@
 
-
 function isEmpty(inputName) {
     "use strict";
+    
 	var x = document.forms["contact_form"][inputName].value;
-	if ((x === null) || (x === "")) {
-		alert("empty field");
-		return false;
+    
+	if ((x === null) || (x === "")) {    
+        var inputNameString = inputName.toString(); 
+        document.getElementsByClassName(inputNameString)[0].innerHTML="Please type something!";
+        return true;
 	}
+    else{  
+        /*
+        document.getElementsByClassName(inputNameString)[0].innerHTML="You typed something!"; */
+        return false;
+    }
 }
 
 function isEmail(inputName) {
@@ -15,17 +22,17 @@ function isEmail(inputName) {
     var x = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/;
     var email = document.forms["contact_form"][inputName].value;
     
+    var isEmptyReturnedValue = isEmpty(inputName);
     
-    if (x.test(email)) {
-        /*alert("is a valid email");
-        return true;*/
+    if(isEmptyReturnedValue != true){
+        if (x.test(email)) {
         document.getElementById("isEmailAlert").innerHTML="This is a valid email!";
-    } 
-    else {   
-        /*alert("is not valid email");
-        return false;*/
+        } 
+        else {   
         document.getElementById("isEmailAlert").innerHTML="Not a valid email address";
+        }
     }
+        
     
 }
 
