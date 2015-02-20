@@ -38,18 +38,21 @@ function isEmail(inputName) {
 
 function isPhoneNumber(inputName) {
     "use strict";
-    
+
     var number = document.forms["contact_form"][inputName].value;
-    /* var phoneNumberRegex = only allow numbers, - and + */
+    var phoneNumberRegex = number.replace(/\D+/g, "");
+    
+    alert(number);
+    alert(phoneNumberRegex);
+
     if (phoneNumberRegex.test(number)) {
-        /*
-        alert("is a valid phone number");
-        return true;*/
+        alert(phoneNumberRegex + " is a valid phone number");
         document.getElementById("isPhoneNumberAlert").innerHTML="This is a valid phone number!";
+        return true;
     } else {
-        /*alert("is not a valid phone number");
-        return false;*/
+        alert("is not a valid phone number");
         document.getElementById("isPhoneNumberAlert").innerHTML="This is not a valid phone number.";
+        return false;
     }
 }
 
