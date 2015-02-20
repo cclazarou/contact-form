@@ -11,7 +11,7 @@ function isEmpty(inputName) {
 	}
     else{  
         /*
-        document.getElementsByClassName(inputNameString)[0].innerHTML="You typed something!"; */
+        document.getElementsByClassName(inputNameString)[0].innerHTML="You typed something!";*/
         return false;
     }
 }
