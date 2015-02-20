@@ -11,7 +11,7 @@ function isEmpty(inputName) {
 	}
     else{  
         /*
-        document.getElementsByClassName(inputNameString)[0].innerHTML="You typed something!"; */
+        document.getElementsByClassName(inputNameString)[0].innerHTML="You typed something!";*/
         return false;
     }
 }
@@ -40,7 +40,11 @@ function isPhoneNumber(inputName) {
     "use strict";
     
     var number = document.forms["contact_form"][inputName].value;
-    /* var phoneNumberRegex = only allow numbers, - and + */
+    
+    if(1===1){
+     alert("1 is 1")
+    }
+    
     if (phoneNumberRegex.test(number)) {
         /*
         alert("is a valid phone number");
