@@ -21,7 +21,7 @@ function isEmpty(inputName) {
 function isEmail(inputName) {
     "use strict";
     
-    var x = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/;
+    var x = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
     var email = document.forms["contact_form"][inputName].value;
     
     if(isEmpty(inputName) != true){
